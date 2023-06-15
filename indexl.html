@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="./reset.css" />
+      <link rel="stylesheet" href="./index.css" />
+   </head>
+   <body>
+      <div class="block">
+         <h2 class="expenseSite">Учёт расходов</h2>
+         <div class="content">
+            <div>
+               <div class="inputExpense">
+                  <input id="inputExpense" type="number" />$.
+               </div>
+               <div class="inputSelect">
+                  <select name="" id="select-type">
+                     <option value="Транспорт">Транспорт</option>
+                     <option value="Жилье">Жилье</option>
+                     <option value="Лекарства">Лекарства</option>
+                     <option value="Еда">Еда</option>
+                  </select>
+               </div>
+            </div>
+            <div>
+               <button class="buttonAdd" id="inputButton">Добавить</button>
+            </div>
+         </div>
+         <div class="down-content">
+            <div class="left">
+               <div class="limitAll">
+                  <h2 class="limit">Лимит:</h2>
+                  <h2 id="questLimit" class="numberLimit"></h2>
+                  <img class="image" id="quest" src="./questlimit.png" alt="" />
+               </div>
+               <div class="expenseAll">
+                  <h2 class="all">Всего:</h2>
+                  <h2 id="allExpense" class="numberLimit"></h2>
+               </div>
+               <div class="statusCnt">
+                  <h2 class="status all">Статус:</h2>
+                  <h2 id="status">Пусто</h2>
+               </div>
+            </div>
+            <div class="right">
+               <h2 class="history">История:</h2>
+               <div id="history"></div>
+            </div>
+         </div>
+      </div>
+      <script src="./index.js"></script>
+   </body>
+</html>
