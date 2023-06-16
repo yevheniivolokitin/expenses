@@ -15,6 +15,7 @@ const posText = "Всё хорошо";
 const negText = "Перебор";
 var limitComparison = 0,
    number = 0;
+limitQ = "";
 
 quest.addEventListener("click", function () {
    askLimit();
@@ -35,7 +36,7 @@ inputButton.addEventListener("click", function () {
 });
 expensesListHTML = "";
 function askLimit() {
-   let limitQ = prompt("Задайте лимит", "");
+   limitQ = prompt("Задайте лимит", "");
    questLimitNode.innerText = limitQ + " $";
    limitComparison = parseInt(limitQ);
    comparison(limitComparison, number);
@@ -58,6 +59,8 @@ function comparison(limitComparison, number) {
       statusNode.classList.remove(NEGATIVE);
    } else {
       statusNode.innerText = negText;
+      questLimitNode.innerText =
+         limitQ + " $" + "(" + (limitComparison - number) + ")";
       statusNode.classList.remove(POSITIVE);
       statusNode.classList.add(NEGATIVE);
    }
