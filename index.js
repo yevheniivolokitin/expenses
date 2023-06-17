@@ -53,7 +53,7 @@ function allSum() {
 }
 
 function comparison(limitComparison, number) {
-   if (limitComparison > number) {
+   if (limitComparison >= number) {
       statusNode.innerText = posText;
       statusNode.classList.add(POSITIVE);
       statusNode.classList.remove(NEGATIVE);
